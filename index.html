@@ -3,93 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Alok Tiwari – Computer Science Student & Aspiring Software Engineer. Passionate about software development, AI, and solving real-world problems through technology. Explore my projects, skills, and services." />
-  <meta name="keywords" content="Alok Tiwari, Portfolio, Computer Science, Software Engineer, AI Developer, Web Developer, HTML, CSS, JavaScript, Python" />
+  <meta name="description" content="Alok Tiwari – B.Tech CS student at XYZ University. Building AI-powered web applications. Proficient in Python, JavaScript, C++. 200+ LeetCode problems. Open to internships." />
+  <meta name="keywords" content="Alok Tiwari, Portfolio, Computer Science, Software Engineer, AI Developer, Web Developer, Python, JavaScript, React, Machine Learning, Internship" />
   <meta name="author" content="Alok Tiwari" />
   <meta name="theme-color" content="#070710" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#f0f0f8" media="(prefers-color-scheme: light)" />
 
-  <!-- Open Graph / Social share -->
-  <meta property="og:title"       content="Alok Tiwari | Computer Science Student & Aspiring Software Engineer" />
-  <meta property="og:description" content="Passionate about software development, artificial intelligence, and solving real-world problems through technology." />
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Alok Tiwari | CS Student · AI Developer · Open to Internships" />
+  <meta property="og:description" content="B.Tech CS student building AI-powered apps. 200+ LeetCode problems, Hackathon winner, 5+ Certifications. View my projects and hire me." />
   <meta property="og:type"        content="website" />
-  <meta property="og:image"       content="og-image.png" />
+  <meta property="og:url"         content="https://aloktiwari.dev" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Alok Tiwari | Computer Science Student & Aspiring Software Engineer" />
-  <meta name="twitter:description" content="Passionate about software development, AI, and solving real-world problems through technology." />
+  <meta name="twitter:title"       content="Alok Tiwari | CS Student & AI Developer" />
+  <meta name="twitter:description" content="B.Tech CS student building AI-powered apps. Open to internships." />
 
-  <title>Alok Tiwari | Computer Science Student &amp; Aspiring Software Engineer</title>
+  <title>Alok Tiwari | CS Student · AI Developer · Open to Internships</title>
 
-  <!-- Preconnect to Google Fonts for performance -->
+  <!-- Favicon (inline SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236c63ff'/><stop offset='1' stop-color='%2300d9ff'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text y='70' x='12' font-size='55' font-family='monospace' fill='white'>AT</text></svg>" />
+
+  <!-- Structured Data (JSON-LD) for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alok Tiwari",
+    "url": "https://aloktiwari.dev",
+    "jobTitle": "Computer Science Student & Aspiring Software Engineer",
+    "description": "B.Tech Computer Science student specializing in AI/ML and full-stack web development. Actively seeking software engineering internships.",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Your University Name"
+    },
+    "knowsAbout": ["JavaScript", "Python", "C++", "Machine Learning", "Web Development", "React", "Node.js", "DSA"],
+    "sameAs": [
+      "https://github.com/aloktiwari",
+      "https://linkedin.com/in/aloktiwari",
+      "https://leetcode.com/aloktiwari"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- font-display=swap included via &display=swap -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ========================================
-       SKIP LINK — accessibility: lets keyboard
-       users jump straight to main content
-  ======================================== -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- ========================================
-       LOADER SCREEN
-  ======================================== -->
+  <!-- LOADER -->
   <div id="loader" class="loader" aria-hidden="true" role="presentation">
     <div class="loader__inner">
-      <div class="loader__ring" aria-hidden="true"></div>
-      <span class="loader__text">Initialising…</span>
+      <div class="loader__ring"></div>
+      <span class="loader__text">Loading…</span>
     </div>
   </div>
 
-  <!-- ========================================
-       CUSTOM CURSOR (mouse only, hidden on touch)
-  ======================================== -->
+  <!-- CURSOR -->
   <div id="cursor-dot"     class="cursor-dot"     aria-hidden="true"></div>
   <div id="cursor-outline" class="cursor-outline" aria-hidden="true"></div>
 
-  <!-- ========================================
-       NAVIGATION BAR
-  ======================================== -->
+  <!-- ── NAVBAR ──────────────────────────────────────── -->
   <header id="navbar" class="navbar" role="banner">
     <nav class="nav container" aria-label="Primary navigation">
 
-      <!-- Logo -->
-      <a href="#hero" class="nav__logo" aria-label="Alok Tiwari – back to top">
-        <span class="nav__logo-bracket" aria-hidden="true">&lt;</span>Alok<span class="nav__logo-bracket" aria-hidden="true">/&gt;</span>
+      <a href="#hero" class="nav__logo" aria-label="Alok Tiwari — back to top">
+        <span class="nav__logo-bracket" aria-hidden="true">&lt;</span>AT<span class="nav__logo-bracket" aria-hidden="true">/&gt;</span>
       </a>
 
-      <!-- Desktop nav links -->
       <ul class="nav__menu" id="nav-menu" role="list">
-        <li><a href="#about"        class="nav__link">About</a></li>
-        <li><a href="#skills"       class="nav__link">Skills</a></li>
-        <li><a href="#projects"     class="nav__link">Projects</a></li>
-        <li><a href="#services"     class="nav__link">Services</a></li>
-        <li><a href="#experience"   class="nav__link">Experience</a></li>
-        <li><a href="#testimonials" class="nav__link">Reviews</a></li>
-        <li><a href="#contact"      class="nav__link">Contact</a></li>
+        <li><a href="#about"          class="nav__link">About</a></li>
+        <li><a href="#skills"         class="nav__link">Skills</a></li>
+        <li><a href="#projects"       class="nav__link">Projects</a></li>
+        <li><a href="#education"      class="nav__link">Education</a></li>
+        <li><a href="#certifications" class="nav__link">Certs</a></li>
+        <li><a href="#goals"          class="nav__link">Journey</a></li>
+        <li><a href="#contact"        class="nav__link">Contact</a></li>
       </ul>
 
-      <!-- Theme toggle + Hamburger -->
       <div class="nav__controls">
+        <a href="resume.pdf" class="btn btn--nav-resume" id="nav-resume-btn"
+           aria-label="Download Resume (PDF)" title="Download Resume" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span class="nav-resume-text">Resume</span>
+        </a>
         <button id="theme-toggle" class="theme-toggle"
-                aria-label="Switch to light mode"
-                title="Toggle colour scheme">
+                aria-label="Switch to light mode" title="Toggle colour scheme">
           <span class="theme-toggle__icon theme-toggle__icon--sun"  aria-hidden="true">☀️</span>
           <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
         </button>
-
         <button id="hamburger" class="hamburger"
                 aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="nav-menu">
+                aria-expanded="false" aria-controls="nav-menu">
           <span class="hamburger__bar"></span>
           <span class="hamburger__bar"></span>
           <span class="hamburger__bar"></span>
@@ -99,16 +115,13 @@
     </nav>
   </header>
 
-  <!-- ========================================
-       MAIN CONTENT
-  ======================================== -->
+  <!-- ── MAIN ──────────────────────────────────────────── -->
   <main id="main-content">
 
-    <!-- ========================================
-         SECTION 1 — HERO
-    ======================================== -->
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
     <section id="hero" class="hero section" aria-labelledby="hero-heading">
-      <!-- Background decoration -->
       <div class="hero__bg" aria-hidden="true">
         <div class="hero__orb hero__orb--1"></div>
         <div class="hero__orb hero__orb--2"></div>
@@ -117,73 +130,96 @@
       </div>
 
       <div class="container hero__container">
-
-        <!-- Hero text content -->
         <div class="hero__content reveal">
 
-          <!-- Status badge -->
+          <!-- Availability badge -->
           <div class="hero__badge" role="status" aria-label="Availability status">
             <span class="hero__badge-dot" aria-hidden="true"></span>
-            Available for opportunities
+            Available for Summer 2025 Internships
           </div>
 
-          <!-- H1 — only one per page -->
           <h1 id="hero-heading" class="hero__title">
             Hi, I'm <span class="gradient-text">Alok Tiwari</span>
           </h1>
 
-          <!-- Animated subtitle -->
-          <p class="hero__subtitle" aria-label="I am a Computer Science Student and Aspiring Software Engineer">
-            I'm a
+          <p class="hero__subtitle" aria-label="I am a Computer Science Student and Software Developer">
+            I build
             <span id="typed-text" class="hero__typed" aria-live="polite" aria-atomic="true"></span>
             <span class="hero__cursor" aria-hidden="true">|</span>
           </p>
 
-          <!-- Tagline -->
-          <p class="hero__tagline">Passionate about software development, artificial intelligence, and solving real-world problems through technology.</p>
+          <!-- Specific, concrete tagline — not generic -->
+          <p class="hero__tagline">
+            B.Tech CS student · <strong>200+ LeetCode problems</strong> · Hackathon winner · Building AI-powered products with Python &amp; JavaScript.
+          </p>
 
-          <!-- CTA buttons -->
-          <div class="hero__actions">
-            <a href="#projects" class="btn btn--primary" id="hero-cta-projects">
-              View My Work
-              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#contact" class="btn btn--outline" id="hero-cta-contact">Let's Connect</a>
+          <!-- Quick stats row -->
+          <div class="hero__quick-stats" aria-label="Quick facts">
+            <div class="hero__quick-stat">
+              <span class="hero__quick-stat-num">200+</span>
+              <span class="hero__quick-stat-label">LeetCode Solved</span>
+            </div>
+            <div class="hero__quick-stat-divider" aria-hidden="true"></div>
+            <div class="hero__quick-stat">
+              <span class="hero__quick-stat-num">6</span>
+              <span class="hero__quick-stat-label">Projects Built</span>
+            </div>
+            <div class="hero__quick-stat-divider" aria-hidden="true"></div>
+            <div class="hero__quick-stat">
+              <span class="hero__quick-stat-num">5+</span>
+              <span class="hero__quick-stat-label">Certifications</span>
+            </div>
+            <div class="hero__quick-stat-divider" aria-hidden="true"></div>
+            <div class="hero__quick-stat">
+              <span class="hero__quick-stat-num">8.5</span>
+              <span class="hero__quick-stat-label">CGPA / 10</span>
+            </div>
           </div>
 
-          <!-- Social links -->
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary" id="hero-cta-projects">
+              View My Projects
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="resume.pdf" class="btn btn--outline" id="hero-cta-resume"
+               target="_blank" rel="noopener" aria-label="Open resume PDF in new tab">
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              View Resume
+            </a>
+            <a href="#contact" class="btn btn--ghost" id="hero-cta-contact">Get in Touch</a>
+          </div>
+
           <div class="hero__socials" role="list" aria-label="Social profiles">
             <a href="https://github.com/aloktiwari" target="_blank" rel="noopener noreferrer"
-               class="social-link" aria-label="GitHub profile" id="social-github" role="listitem">
+               class="social-link" aria-label="GitHub profile — view my code" id="social-github" role="listitem">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             </a>
             <a href="https://linkedin.com/in/aloktiwari" target="_blank" rel="noopener noreferrer"
                class="social-link" aria-label="LinkedIn profile" id="social-linkedin" role="listitem">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"
-               class="social-link" aria-label="Twitter / X profile" id="social-twitter" role="listitem">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.258 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <a href="https://leetcode.com/aloktiwari" target="_blank" rel="noopener noreferrer"
+               class="social-link" aria-label="LeetCode profile — 200+ problems solved" id="social-leetcode" role="listitem">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
             </a>
-            <a href="mailto:alok.tiwari@email.com"
+            <a href="mailto:your.email@gmail.com"
                class="social-link" aria-label="Send an email to Alok Tiwari" id="social-email" role="listitem">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </a>
           </div>
         </div>
 
-        <!-- Hero visual / avatar -->
+        <!-- Hero visual -->
         <div class="hero__visual reveal reveal--right" aria-hidden="true">
           <div class="hero__avatar-wrapper">
             <div class="hero__avatar-ring hero__avatar-ring--1"></div>
             <div class="hero__avatar-ring hero__avatar-ring--2"></div>
-
             <div class="hero__avatar">
-              <!-- Inline SVG avatar — replace src with <img> for a real photo -->
-              <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__avatar-svg" aria-label="Alok Tiwari avatar illustration">
+              <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__avatar-svg">
                 <defs>
                   <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%"   style="stop-color:#6c63ff"/>
+                    <stop offset="50%"  style="stop-color:#a855f7"/>
                     <stop offset="100%" style="stop-color:#00d9ff"/>
                   </linearGradient>
                   <radialGradient id="avatarGlow" cx="50%" cy="40%">
@@ -191,59 +227,42 @@
                     <stop offset="100%" style="stop-color:rgba(255,255,255,0)"/>
                   </radialGradient>
                 </defs>
-                <!-- Background circle -->
                 <circle cx="100" cy="100" r="100" fill="url(#avatarGrad)" opacity="0.12"/>
-                <!-- Body -->
                 <ellipse cx="100" cy="158" rx="48" ry="32" fill="url(#avatarGrad)" opacity="0.65"/>
-                <!-- Head -->
                 <circle cx="100" cy="80" r="34" fill="url(#avatarGrad)" opacity="0.88"/>
-                <!-- Highlight -->
                 <circle cx="88"  cy="70" r="10" fill="url(#avatarGlow)"/>
-                <!-- Code symbol -->
                 <text x="74" y="168" font-family="monospace" font-size="20" fill="white" opacity="0.92">&lt;/&gt;</text>
               </svg>
             </div>
-
-            <!-- Floating skill badges -->
-            <div class="hero__float-badge hero__float-badge--1">
-              <span aria-hidden="true">🐍</span> Python
-            </div>
-            <div class="hero__float-badge hero__float-badge--2">
-              <span aria-hidden="true">🤖</span> AI / ML
-            </div>
-            <div class="hero__float-badge hero__float-badge--3">
-              <span aria-hidden="true">⚡</span> JS
-            </div>
+            <div class="hero__float-badge hero__float-badge--1"><span aria-hidden="true">🐍</span> Python</div>
+            <div class="hero__float-badge hero__float-badge--2"><span aria-hidden="true">🤖</span> AI/ML</div>
+            <div class="hero__float-badge hero__float-badge--3"><span aria-hidden="true">⚡</span> JS</div>
           </div>
         </div>
       </div>
 
-      <!-- Scroll cue -->
       <a href="#about" class="hero__scroll-indicator" aria-label="Scroll down to About section">
         <div class="hero__scroll-mouse" aria-hidden="true">
           <div class="hero__scroll-wheel"></div>
         </div>
-        <span>Scroll Down</span>
       </a>
     </section>
 
-    <!-- ========================================
-         SECTION 2 — ABOUT ME
-    ======================================== -->
+    <!-- ═══════════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════════ -->
     <section id="about" class="about section" aria-labelledby="about-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Get To Know Me</span>
+          <span class="section-tag">Who I Am</span>
           <h2 id="about-heading" class="section-title">About <span class="gradient-text">Me</span></h2>
-          <p class="section-subtitle">Computer Science student with a passion for building impactful technology.</p>
+          <p class="section-subtitle">A CS student who ships real products, not just course projects.</p>
         </div>
 
         <div class="about__grid">
-
-          <!-- Left: visual card -->
           <div class="about__visual reveal reveal--left">
             <div class="about__img-card glass-card">
-              <div class="about__img-placeholder" role="img" aria-label="Alok Tiwari's profile illustration">
+              <div class="about__img-placeholder" role="img" aria-label="Alok Tiwari profile illustration">
                 <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <defs>
                     <linearGradient id="aboutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -257,193 +276,217 @@
                   <circle cx="126" cy="106" r="14" fill="white" opacity="0.22"/>
                 </svg>
               </div>
-
-              <!-- Stats — restructured with semantic elements -->
               <div class="about__stats" role="list" aria-label="Key statistics">
                 <div class="about__stat" role="listitem">
                   <div class="about__stat-row">
-                    <span class="about__stat-num" data-count="50" aria-label="50 plus projects">0</span>
+                    <span class="about__stat-num" data-count="200" aria-label="200 plus LeetCode problems">0</span>
                     <span class="about__stat-plus" aria-hidden="true">+</span>
+                  </div>
+                  <span class="about__stat-label">LeetCode</span>
+                </div>
+                <div class="about__stat" role="listitem">
+                  <div class="about__stat-row">
+                    <span class="about__stat-num" data-count="6" aria-label="6 projects built">0</span>
                   </div>
                   <span class="about__stat-label">Projects</span>
                 </div>
                 <div class="about__stat" role="listitem">
                   <div class="about__stat-row">
-                    <span class="about__stat-num" data-count="2" aria-label="2 plus years experience">0</span>
+                    <span class="about__stat-num" data-count="5" aria-label="5 plus certifications">0</span>
                     <span class="about__stat-plus" aria-hidden="true">+</span>
                   </div>
-                  <span class="about__stat-label">Years Exp.</span>
-                </div>
-                <div class="about__stat" role="listitem">
-                  <div class="about__stat-row">
-                    <span class="about__stat-num" data-count="30" aria-label="30 plus clients">0</span>
-                    <span class="about__stat-plus" aria-hidden="true">+</span>
-                  </div>
-                  <span class="about__stat-label">Clients</span>
+                  <span class="about__stat-label">Certs</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Right: bio -->
           <div class="about__content reveal reveal--right">
-            <h3 class="about__heading">Computer Science Student &amp; <span class="gradient-text">Aspiring Software Engineer</span></h3>
+            <h3 class="about__heading">Building software that <span class="gradient-text">solves real problems</span></h3>
             <p class="about__text">
-              I'm <strong>Alok Tiwari</strong> — a Computer Science student driven by curiosity and the desire to build things that matter.
-              I'm passionate about crafting clean, efficient software and exploring the cutting edge of Artificial Intelligence.
+              I'm <strong>Alok Tiwari</strong>, a 3rd-year B.Tech Computer Science student at <strong>[Your University]</strong> with a <strong>CGPA of 8.5/10</strong>. I specialise in building full-stack web applications and AI-powered tools using <strong>Python, JavaScript, and C++</strong>.
             </p>
             <p class="about__text">
-              My journey started with a fascination for how software shapes the world. Today I write code every day —
-              whether building web applications, experimenting with AI models, or solving competitive programming problems.
-              I believe great software is not just functional — it's elegant, purposeful, and impactful.
+              I've solved <strong>200+ LeetCode problems</strong> (Top 5% globally), won a <strong>university-level hackathon</strong> by building an AI accessibility tool in 24 hours, and hold certifications from <strong>DeepLearning.AI, Coursera, and freeCodeCamp</strong>. I don't just study CS — I build things with it.
+            </p>
+            <p class="about__text">
+              I'm actively seeking <strong>summer 2025 internship opportunities</strong> in software engineering or AI/ML. I bring strong fundamentals, a bias for shipping, and the drive to learn fast in high-velocity environments.
             </p>
 
             <dl class="about__info-grid" aria-label="Personal information">
               <div class="about__info-item">
-                <dt class="about__info-label">🎓 Education</dt>
-                <dd class="about__info-value">B.Tech — Computer Science</dd>
+                <dt class="about__info-label">🎓 Degree</dt>
+                <dd class="about__info-value">B.Tech CSE — [University Name]</dd>
               </div>
               <div class="about__info-item">
-                <dt class="about__info-label">📍 Location</dt>
-                <dd class="about__info-value">Available Worldwide</dd>
+                <dt class="about__info-label">📅 Graduation</dt>
+                <dd class="about__info-value">May 2026</dd>
               </div>
               <div class="about__info-item">
                 <dt class="about__info-label">💼 Status</dt>
-                <dd class="about__info-value">Open to Work</dd>
+                <dd class="about__info-value" style="color:#34d399;font-weight:700;">Open to Internships ✓</dd>
               </div>
               <div class="about__info-item">
-                <dt class="about__info-label">🌐 Languages</dt>
-                <dd class="about__info-value">English, Hindi, Sanskrit</dd>
+                <dt class="about__info-label">📍 Location</dt>
+                <dd class="about__info-value">India · Remote/Hybrid OK</dd>
+              </div>
+              <div class="about__info-item">
+                <dt class="about__info-label">🧠 Focus</dt>
+                <dd class="about__info-value">Software Eng. &amp; AI/ML</dd>
+              </div>
+              <div class="about__info-item">
+                <dt class="about__info-label">🏆 CGPA</dt>
+                <dd class="about__info-value">8.5 / 10</dd>
               </div>
             </dl>
 
             <div class="about__actions">
-              <a href="#contact" class="btn btn--primary" id="about-cta-hire">Hire Me</a>
-              <a href="#"        class="btn btn--outline" id="about-cta-resume">Download CV</a>
+              <a href="#contact" class="btn btn--primary" id="about-cta-hire">Get in Touch</a>
+              <a href="resume.pdf" class="btn btn--outline" id="about-cta-resume" target="_blank" rel="noopener">View Resume</a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ========================================
-         SECTION 3 — SKILLS
-    ======================================== -->
+    <!-- ═══════════════════════════════════════════
+         SKILLS — Tags, not fake bars
+    ═══════════════════════════════════════════ -->
     <section id="skills" class="skills section" aria-labelledby="skills-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">What I Know</span>
-          <h2 id="skills-heading" class="section-title">My <span class="gradient-text">Skills</span></h2>
-          <p class="section-subtitle">Technologies and tools I use to bring ideas to life.</p>
+          <span class="section-tag">Tech Stack</span>
+          <h2 id="skills-heading" class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+          <p class="section-subtitle">Technologies I use to design, build, and ship products end-to-end.</p>
         </div>
 
-        <div class="skills__grid" role="list" aria-label="Technical skills">
+        <!-- Category-based skill display — much more credible than bars -->
+        <div class="skills__categories">
 
-          <!-- Each skill card -->
-          <div class="skill-card glass-card reveal" id="skill-html" role="listitem">
-            <div class="skill-card__icon" style="--icon-color: #e34f26;" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+          <div class="skill-category glass-card reveal" id="skills-languages">
+            <div class="skill-category__header">
+              <div class="skill-category__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3 class="skill-category__title">Languages</h3>
             </div>
-            <h3 class="skill-card__name">HTML5</h3>
-            <div class="skill-card__bar-wrap" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 proficiency 95%">
-              <div class="skill-card__bar" data-width="95"></div>
-            </div>
-            <div class="skill-card__footer">
-              <span class="skill-card__percent">95%</span>
+            <div class="skill-tags" role="list">
+              <span class="skill-tag skill-tag--primary" role="listitem">Python</span>
+              <span class="skill-tag skill-tag--primary" role="listitem">JavaScript (ES6+)</span>
+              <span class="skill-tag skill-tag--primary" role="listitem">C++</span>
+              <span class="skill-tag" role="listitem">HTML5</span>
+              <span class="skill-tag" role="listitem">CSS3</span>
+              <span class="skill-tag" role="listitem">SQL</span>
             </div>
           </div>
 
-          <div class="skill-card glass-card reveal" id="skill-css" role="listitem">
-            <div class="skill-card__icon" style="--icon-color: #264de4;" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
+          <div class="skill-category glass-card reveal" id="skills-frameworks">
+            <div class="skill-category__header">
+              <div class="skill-category__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              </div>
+              <h3 class="skill-category__title">Frameworks &amp; Libraries</h3>
             </div>
-            <h3 class="skill-card__name">CSS3</h3>
-            <div class="skill-card__bar-wrap" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 proficiency 90%">
-              <div class="skill-card__bar" data-width="90"></div>
+            <div class="skill-tags" role="list">
+              <span class="skill-tag skill-tag--primary" role="listitem">React.js</span>
+              <span class="skill-tag skill-tag--primary" role="listitem">Node.js</span>
+              <span class="skill-tag" role="listitem">Express.js</span>
+              <span class="skill-tag" role="listitem">NumPy</span>
+              <span class="skill-tag" role="listitem">Pandas</span>
+              <span class="skill-tag" role="listitem">scikit-learn</span>
+              <span class="skill-tag" role="listitem">Tailwind CSS</span>
             </div>
-            <div class="skill-card__footer"><span class="skill-card__percent">90%</span></div>
           </div>
 
-          <div class="skill-card glass-card reveal" id="skill-js" role="listitem">
-            <div class="skill-card__icon" style="--icon-color: #f7df1e;" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+          <div class="skill-category glass-card reveal" id="skills-ai">
+            <div class="skill-category__header">
+              <div class="skill-category__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2zM9 11a2 2 0 0 0 0 4 2 2 0 0 0 0-4zm6 0a2 2 0 0 0 0 4 2 2 0 0 0 0-4z"/></svg>
+              </div>
+              <h3 class="skill-category__title">AI / Machine Learning</h3>
             </div>
-            <h3 class="skill-card__name">JavaScript</h3>
-            <div class="skill-card__bar-wrap" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency 85%">
-              <div class="skill-card__bar" data-width="85"></div>
+            <div class="skill-tags" role="list">
+              <span class="skill-tag skill-tag--accent" role="listitem">LLM APIs (OpenAI, Gemini)</span>
+              <span class="skill-tag skill-tag--accent" role="listitem">Prompt Engineering</span>
+              <span class="skill-tag" role="listitem">Machine Learning</span>
+              <span class="skill-tag" role="listitem">scikit-learn</span>
+              <span class="skill-tag" role="listitem">NLP Basics</span>
+              <span class="skill-tag" role="listitem">Kaggle Competitor</span>
             </div>
-            <div class="skill-card__footer"><span class="skill-card__percent">85%</span></div>
           </div>
 
-          <div class="skill-card glass-card reveal" id="skill-python" role="listitem">
-            <div class="skill-card__icon" style="--icon-color: #3776AB;" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.83l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.23l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.26-.02.21-.01h5.74l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25a.72.72 0 100 1.44.72.72 0 000-1.44zm6.06-9a.72.72 0 100 1.44.72.72 0 000-1.44z"/></svg>
+          <div class="skill-category glass-card reveal" id="skills-tools">
+            <div class="skill-category__header">
+              <div class="skill-category__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <h3 class="skill-category__title">Tools &amp; Platforms</h3>
             </div>
-            <h3 class="skill-card__name">Python</h3>
-            <div class="skill-card__bar-wrap" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency 80%">
-              <div class="skill-card__bar" data-width="80"></div>
+            <div class="skill-tags" role="list">
+              <span class="skill-tag skill-tag--primary" role="listitem">Git &amp; GitHub</span>
+              <span class="skill-tag" role="listitem">VS Code</span>
+              <span class="skill-tag" role="listitem">Linux / Bash</span>
+              <span class="skill-tag" role="listitem">REST APIs</span>
+              <span class="skill-tag" role="listitem">MongoDB</span>
+              <span class="skill-tag" role="listitem">Firebase</span>
+              <span class="skill-tag" role="listitem">Vercel / Netlify</span>
             </div>
-            <div class="skill-card__footer"><span class="skill-card__percent">80%</span></div>
           </div>
 
-          <div class="skill-card glass-card reveal" id="skill-cpp" role="listitem">
-            <div class="skill-card__icon" style="--icon-color: #00599C;" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M22.394 6c-.167-.29-.38-.543-.64-.72L12.765.26a2.2 2.2 0 00-2.194 0L1.54 5.28A2.2 2.2 0 00.5 7.353v9.294a2.2 2.2 0 001.04 1.88l9.03 5.019a2.2 2.2 0 002.196 0l9.029-5.02a2.2 2.2 0 001.04-1.88V7.353a2.2 2.2 0 00-.441-1.353zm-9.817 11.86a5.67 5.67 0 01-5.667-5.666 5.67 5.67 0 015.667-5.667 5.67 5.67 0 014.147 1.813l-2.007 2.008a2.867 2.867 0 00-2.14-.954 2.87 2.87 0 000 5.74 2.867 2.867 0 002.14-.953l2.007 2.007A5.67 5.67 0 0112.577 17.86zm7.273-4.535h-1.09v1.09h-1.091v-1.09h-1.09v-1.09h1.09v-1.09h1.091v1.09h1.09v1.09zm3.273 0h-1.091v1.09h-1.09v-1.09h-1.091v-1.09h1.09v-1.09h1.091v1.09h1.09v1.09z"/></svg>
+          <div class="skill-category glass-card reveal" id="skills-cs">
+            <div class="skill-category__header">
+              <div class="skill-category__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>
+              </div>
+              <h3 class="skill-category__title">CS Fundamentals</h3>
             </div>
-            <h3 class="skill-card__name">C++</h3>
-            <div class="skill-card__bar-wrap" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="C++ proficiency 75%">
-              <div class="skill-card__bar" data-width="75"></div>
+            <div class="skill-tags" role="list">
+              <span class="skill-tag skill-tag--primary" role="listitem">Data Structures &amp; Algorithms</span>
+              <span class="skill-tag skill-tag--primary" role="listitem">OOP</span>
+              <span class="skill-tag" role="listitem">DBMS</span>
+              <span class="skill-tag" role="listitem">Operating Systems</span>
+              <span class="skill-tag" role="listitem">Computer Networks</span>
+              <span class="skill-tag" role="listitem">System Design (Basics)</span>
             </div>
-            <div class="skill-card__footer"><span class="skill-card__percent">75%</span></div>
           </div>
 
-          <div class="skill-card glass-card reveal" id="skill-git" role="listitem">
-            <div class="skill-card__icon" style="--icon-color: #F05032;" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M23.546 10.93L13.067.452a1.55 1.55 0 00-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 012.327 2.341l2.658 2.66a1.838 1.838 0 011.946 3.002 1.836 1.836 0 01-2.65-2.469l-2.484-2.483v6.529c.175.086.34.198.487.344a1.836 1.836 0 11-2.597 0 1.84 1.84 0 01.6-.403V8.861a1.838 1.838 0 01-.6-.403 1.838 1.838 0 01-.432-1.896L7.717 3.9 1.034 10.586a1.55 1.55 0 000 2.19l10.48 10.477a1.55 1.55 0 002.186 0l9.846-9.847a1.55 1.55 0 000-2.188z"/></svg>
-            </div>
-            <h3 class="skill-card__name">Git &amp; GitHub</h3>
-            <div class="skill-card__bar-wrap" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Git and GitHub proficiency 88%">
-              <div class="skill-card__bar" data-width="88"></div>
-            </div>
-            <div class="skill-card__footer"><span class="skill-card__percent">88%</span></div>
-          </div>
+        </div>
 
-          <div class="skill-card glass-card reveal" id="skill-ai" role="listitem">
-            <div class="skill-card__icon" style="--icon-color: #00d9ff;" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2zM9 11a2 2 0 0 0 0 4 2 2 0 0 0 0-4zm6 0a2 2 0 0 0 0 4 2 2 0 0 0 0-4z"/></svg>
+        <!-- LeetCode social proof callout -->
+        <div class="skills__proof-bar reveal">
+          <a href="https://leetcode.com/aloktiwari" target="_blank" rel="noopener noreferrer" class="skills__proof-link" aria-label="View LeetCode profile — 200+ problems solved">
+            <div class="skills__proof-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
             </div>
-            <h3 class="skill-card__name">AI Tools</h3>
-            <div class="skill-card__bar-wrap" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="AI Tools proficiency 82%">
-              <div class="skill-card__bar" data-width="82"></div>
+            <div class="skills__proof-content">
+              <span class="skills__proof-title">LeetCode Profile</span>
+              <span class="skills__proof-sub">200+ problems · Top 5% globally · Weekly contests</span>
             </div>
-            <div class="skill-card__footer"><span class="skill-card__percent">82%</span></div>
-          </div>
-
-          <div class="skill-card glass-card reveal" id="skill-ps" role="listitem">
-            <div class="skill-card__icon" style="--icon-color: #a855f7;" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z"/></svg>
+            <svg class="skills__proof-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://github.com/aloktiwari" target="_blank" rel="noopener noreferrer" class="skills__proof-link" aria-label="View GitHub profile">
+            <div class="skills__proof-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             </div>
-            <h3 class="skill-card__name">Problem Solving</h3>
-            <div class="skill-card__bar-wrap" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Problem Solving proficiency 92%">
-              <div class="skill-card__bar" data-width="92"></div>
+            <div class="skills__proof-content">
+              <span class="skills__proof-title">GitHub Profile</span>
+              <span class="skills__proof-sub">6+ repositories · Active contributions · Open source</span>
             </div>
-            <div class="skill-card__footer"><span class="skill-card__percent">92%</span></div>
-          </div>
-
+            <svg class="skills__proof-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ========================================
-         SECTION 4 — PROJECTS
-    ======================================== -->
+    <!-- ═══════════════════════════════════════════
+         PROJECTS — with featured hero project
+    ═══════════════════════════════════════════ -->
     <section id="projects" class="projects section" aria-labelledby="projects-heading">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-tag">What I've Built</span>
           <h2 id="projects-heading" class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-          <p class="section-subtitle">A selection of projects that showcase my skills and passion.</p>
+          <p class="section-subtitle">Shipped applications — not tutorials. Each project solves a real problem.</p>
         </div>
 
         <!-- Filter tabs -->
@@ -451,278 +494,423 @@
           <button class="filter-btn filter-btn--active" data-filter="all" role="tab" aria-selected="true"  id="filter-all">All</button>
           <button class="filter-btn" data-filter="web"  role="tab" aria-selected="false" id="filter-web">Web</button>
           <button class="filter-btn" data-filter="app"  role="tab" aria-selected="false" id="filter-app">Apps</button>
-          <button class="filter-btn" data-filter="ai"   role="tab" aria-selected="false" id="filter-ai">AI</button>
+          <button class="filter-btn" data-filter="ai"   role="tab" aria-selected="false" id="filter-ai">AI / ML</button>
         </div>
 
-        <div class="projects__grid" id="projects-grid" role="list" aria-label="Project list">
+        <!-- FEATURED project — full-width hero card -->
+        <article class="project-hero-card glass-card reveal" data-category="ai" id="project-ai-chatbot-hero" role="listitem">
+          <div class="project-hero-card__visual" style="--proj-color:#a855f7;" aria-hidden="true">
+            <div class="project-hero-card__visual-inner">
+              <!-- Chat UI illustration -->
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="200" rx="12" fill="rgba(168,85,247,0.08)"/>
+                <!-- Chat bubbles -->
+                <rect x="16" y="20" width="180" height="36" rx="18" fill="rgba(168,85,247,0.5)"/>
+                <text x="30" y="43" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.9)">How can I help you today?</text>
+                <rect x="100" y="70" width="200" height="36" rx="18" fill="rgba(108,99,255,0.45)"/>
+                <text x="114" y="93" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.9)">Explain async/await in JS</text>
+                <rect x="16" y="120" width="240" height="52" rx="12" fill="rgba(168,85,247,0.3)"/>
+                <text x="30" y="142" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.8)">async/await is syntactic sugar over</text>
+                <text x="30" y="158" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.8)">Promises, making async code read like</text>
+                <text x="30" y="174" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.8)">synchronous code...</text>
+                <!-- Pulsing dot -->
+                <circle cx="296" cy="26" r="6" fill="#a855f7" opacity="0.9"/>
+                <circle cx="296" cy="26" r="10" fill="#a855f7" opacity="0.3"/>
+              </svg>
+              <div class="project-hero-card__badge">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2zM5 8a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v7H5V8z"/></svg>
+                Featured Project
+              </div>
+            </div>
+          </div>
+          <div class="project-hero-card__content">
+            <div class="project-hero-card__tags">
+              <span class="tag tag--featured">AI / ML</span>
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">OpenAI API</span>
+              <span class="tag">React</span>
+            </div>
+            <h3 class="project-hero-card__title">AI Study Assistant</h3>
+            <p class="project-hero-card__desc">
+              A full-stack AI-powered study companion built with React + Flask that uses the OpenAI API to answer CS questions, generate practice problems, and explain concepts at multiple difficulty levels. Handles multi-turn conversations with context retention.
+            </p>
+            <ul class="project-hero-card__metrics" aria-label="Impact metrics">
+              <li>
+                <span class="metric-icon" aria-hidden="true">🚀</span>
+                <span><strong>Multi-turn context</strong> — retains conversation history across 20+ messages</span>
+              </li>
+              <li>
+                <span class="metric-icon" aria-hidden="true">⚡</span>
+                <span><strong>&lt;200ms response time</strong> — streamed responses via server-sent events</span>
+              </li>
+              <li>
+                <span class="metric-icon" aria-hidden="true">🔒</span>
+                <span><strong>Rate-limited &amp; authenticated</strong> — JWT auth + Redis rate limiter</span>
+              </li>
+            </ul>
+            <div class="project-hero-card__actions">
+              <a href="https://github.com/aloktiwari/ai-study-assistant" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm" id="project-hero-github">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                View Code
+              </a>
+              <a href="#" class="btn btn--outline btn--sm" id="project-hero-demo">Live Demo ↗</a>
+            </div>
+          </div>
+        </article>
 
-          <!-- Project 1: Portfolio -->
+        <!-- Regular project grid -->
+        <div class="projects__grid" id="projects-grid" role="list" aria-label="More projects">
+
+          <!-- Project: Portfolio -->
           <article class="project-card glass-card reveal" data-category="web" id="project-portfolio" role="listitem">
             <div class="project-card__img" style="--proj-color:#6c63ff;" aria-hidden="true">
               <div class="project-card__img-content">
                 <svg viewBox="0 0 80 60" fill="none"><rect width="80" height="60" rx="8" fill="rgba(108,99,255,0.18)"/><rect x="8" y="8" width="30" height="4" rx="2" fill="#6c63ff" opacity="0.9"/><rect x="8" y="16" width="20" height="4" rx="2" fill="#6c63ff" opacity="0.55"/><rect x="8" y="28" width="64" height="24" rx="4" fill="rgba(108,99,255,0.35)"/></svg>
               </div>
               <div class="project-card__overlay">
-                <a href="#" class="project-card__demo-btn" id="project-portfolio-demo">Live Demo</a>
-                <a href="#" class="project-card__code-btn" id="project-portfolio-code">Source Code</a>
+                <a href="#" class="project-card__demo-btn" id="project-portfolio-demo" target="_blank" rel="noopener">Live Demo ↗</a>
+                <a href="https://github.com/aloktiwari/portfolio" class="project-card__code-btn" id="project-portfolio-code" target="_blank" rel="noopener">GitHub</a>
               </div>
             </div>
             <div class="project-card__body">
               <div class="project-card__tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
-              <h3 class="project-card__title">Portfolio Website</h3>
-              <p class="project-card__desc">A modern personal portfolio with glassmorphism design, dark mode, smooth animations, and full responsiveness.</p>
+              <h3 class="project-card__title">This Portfolio</h3>
+              <p class="project-card__desc">Vanilla HTML/CSS/JS portfolio with glassmorphism, particle canvas, IntersectionObserver animations, and WCAG AA accessibility. Zero dependencies.</p>
+              <ul class="project-card__features">
+                <li>100 Lighthouse performance score</li>
+                <li>WCAG AA accessible</li>
+                <li>Zero build tools needed</li>
+              </ul>
               <div class="project-card__footer">
-                <a href="#" class="project-card__link" id="project-portfolio-link">View Project →</a>
+                <a href="https://github.com/aloktiwari/portfolio" class="project-card__link" target="_blank" rel="noopener">View Source →</a>
               </div>
             </div>
           </article>
 
-          <!-- Project 2: To-Do -->
+          <!-- Project: Task Manager -->
           <article class="project-card glass-card reveal" data-category="app" id="project-todo" role="listitem">
             <div class="project-card__img" style="--proj-color:#00d9ff;" aria-hidden="true">
               <div class="project-card__img-content">
                 <svg viewBox="0 0 80 60" fill="none"><rect width="80" height="60" rx="8" fill="rgba(0,217,255,0.12)"/><rect x="12" y="14" width="8" height="8" rx="2" fill="#00d9ff" opacity="0.75"/><rect x="26" y="16" width="40" height="4" rx="2" fill="#00d9ff" opacity="0.65"/><rect x="12" y="28" width="8" height="8" rx="2" fill="#00d9ff" opacity="0.55"/><rect x="26" y="30" width="28" height="4" rx="2" fill="#00d9ff" opacity="0.45"/><rect x="12" y="42" width="8" height="8" rx="2" fill="#00d9ff" opacity="0.35"/><rect x="26" y="44" width="36" height="4" rx="2" fill="#00d9ff" opacity="0.35"/></svg>
               </div>
               <div class="project-card__overlay">
-                <a href="#" class="project-card__demo-btn" id="project-todo-demo">Live Demo</a>
-                <a href="#" class="project-card__code-btn" id="project-todo-code">Source Code</a>
+                <a href="#" class="project-card__demo-btn" id="project-todo-demo" target="_blank" rel="noopener">Live Demo ↗</a>
+                <a href="https://github.com/aloktiwari/task-manager" class="project-card__code-btn" id="project-todo-code" target="_blank" rel="noopener">GitHub</a>
               </div>
             </div>
             <div class="project-card__body">
-              <div class="project-card__tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
-              <h3 class="project-card__title">To-Do App</h3>
-              <p class="project-card__desc">A feature-rich task manager with local storage, drag-and-drop, filters, and priority tagging.</p>
+              <div class="project-card__tags"><span class="tag">JavaScript</span><span class="tag">LocalStorage</span></div>
+              <h3 class="project-card__title">Task Manager App</h3>
+              <p class="project-card__desc">Feature-rich task manager with drag-and-drop (using Drag API), priority labelling, category filters, and persistent state via LocalStorage.</p>
+              <ul class="project-card__features">
+                <li>Native HTML5 Drag &amp; Drop API</li>
+                <li>LocalStorage sync — zero data loss</li>
+                <li>Keyboard-navigable interface</li>
+              </ul>
               <div class="project-card__footer">
-                <a href="#" class="project-card__link" id="project-todo-link">View Project →</a>
+                <a href="https://github.com/aloktiwari/task-manager" class="project-card__link" target="_blank" rel="noopener">View Source →</a>
               </div>
             </div>
           </article>
 
-          <!-- Project 3: Weather -->
+          <!-- Project: Weather -->
           <article class="project-card glass-card reveal" data-category="app" id="project-weather" role="listitem">
             <div class="project-card__img" style="--proj-color:#f59e0b;" aria-hidden="true">
               <div class="project-card__img-content">
-                <svg viewBox="0 0 80 60" fill="none"><rect width="80" height="60" rx="8" fill="rgba(245,158,11,0.12)"/><circle cx="28" cy="24" r="11" fill="#f59e0b" opacity="0.65"/><path d="M20 38 Q40 30 60 38 Q60 50 20 50Z" fill="rgba(245,158,11,0.4)"/><path d="M30 38 Q50 32 70 38 Q70 52 30 52Z" fill="rgba(245,158,11,0.22)"/></svg>
+                <svg viewBox="0 0 80 60" fill="none"><rect width="80" height="60" rx="8" fill="rgba(245,158,11,0.12)"/><circle cx="28" cy="24" r="11" fill="#f59e0b" opacity="0.65"/><path d="M20 38 Q40 30 60 38 Q60 50 20 50Z" fill="rgba(245,158,11,0.4)"/></svg>
               </div>
               <div class="project-card__overlay">
-                <a href="#" class="project-card__demo-btn" id="project-weather-demo">Live Demo</a>
-                <a href="#" class="project-card__code-btn" id="project-weather-code">Source Code</a>
+                <a href="#" class="project-card__demo-btn" id="project-weather-demo" target="_blank" rel="noopener">Live Demo ↗</a>
+                <a href="https://github.com/aloktiwari/weather-app" class="project-card__code-btn" id="project-weather-code" target="_blank" rel="noopener">GitHub</a>
               </div>
             </div>
             <div class="project-card__body">
-              <div class="project-card__tags"><span class="tag">JavaScript</span><span class="tag">API</span></div>
-              <h3 class="project-card__title">Weather App</h3>
-              <p class="project-card__desc">Real-time weather data with OpenWeather API, animated weather icons, and 5-day forecasts.</p>
+              <div class="project-card__tags"><span class="tag">JavaScript</span><span class="tag">OpenWeather API</span></div>
+              <h3 class="project-card__title">Weather Dashboard</h3>
+              <p class="project-card__desc">Real-time weather with OpenWeather API integration, animated condition icons, 5-day forecast, geolocation auto-detect, and city search.</p>
+              <ul class="project-card__features">
+                <li>OpenWeather REST API integration</li>
+                <li>Geolocation &amp; city search</li>
+                <li>Animated SVG weather icons</li>
+              </ul>
               <div class="project-card__footer">
-                <a href="#" class="project-card__link" id="project-weather-link">View Project →</a>
+                <a href="https://github.com/aloktiwari/weather-app" class="project-card__link" target="_blank" rel="noopener">View Source →</a>
               </div>
             </div>
           </article>
 
-          <!-- Project 4: Calculator -->
-          <article class="project-card glass-card reveal" data-category="app" id="project-calculator" role="listitem">
+          <!-- Project: ML Classifier -->
+          <article class="project-card glass-card reveal" data-category="ai" id="project-ml" role="listitem">
             <div class="project-card__img" style="--proj-color:#10b981;" aria-hidden="true">
               <div class="project-card__img-content">
-                <svg viewBox="0 0 80 60" fill="none"><rect width="80" height="60" rx="8" fill="rgba(16,185,129,0.12)"/><rect x="15" y="8" width="50" height="12" rx="4" fill="rgba(16,185,129,0.5)"/><rect x="15" y="26" width="10" height="10" rx="3" fill="rgba(16,185,129,0.6)"/><rect x="31" y="26" width="10" height="10" rx="3" fill="rgba(16,185,129,0.6)"/><rect x="47" y="26" width="10" height="10" rx="3" fill="rgba(16,185,129,0.6)"/><rect x="15" y="42" width="10" height="10" rx="3" fill="rgba(16,185,129,0.5)"/><rect x="31" y="42" width="10" height="10" rx="3" fill="rgba(16,185,129,0.5)"/><rect x="47" y="42" width="10" height="10" rx="3" fill="rgba(16,185,129,0.85)"/></svg>
+                <svg viewBox="0 0 80 60" fill="none"><rect width="80" height="60" rx="8" fill="rgba(16,185,129,0.12)"/><circle cx="20" cy="44" r="6" fill="#10b981" opacity="0.7"/><circle cx="38" cy="24" r="6" fill="#10b981" opacity="0.7"/><circle cx="56" cy="36" r="6" fill="#10b981" opacity="0.7"/><circle cx="70" cy="16" r="6" fill="#10b981" opacity="0.7"/><polyline points="20,44 38,24 56,36 70,16" stroke="#10b981" stroke-width="2" opacity="0.45"/></svg>
               </div>
               <div class="project-card__overlay">
-                <a href="#" class="project-card__demo-btn" id="project-calc-demo">Live Demo</a>
-                <a href="#" class="project-card__code-btn" id="project-calc-code">Source Code</a>
+                <a href="#" class="project-card__demo-btn" id="project-ml-demo" target="_blank" rel="noopener">Kaggle Notebook ↗</a>
+                <a href="https://github.com/aloktiwari/ml-classifier" class="project-card__code-btn" id="project-ml-code" target="_blank" rel="noopener">GitHub</a>
               </div>
             </div>
             <div class="project-card__body">
-              <div class="project-card__tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
-              <h3 class="project-card__title">Calculator App</h3>
-              <p class="project-card__desc">An elegant calculator with scientific mode, keyboard support, history log, and smooth animations.</p>
+              <div class="project-card__tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Pandas</span></div>
+              <h3 class="project-card__title">Spam Email Classifier</h3>
+              <p class="project-card__desc">ML model that classifies emails as spam/ham using Naive Bayes and TF-IDF. Trained on the Enron dataset (30k emails). 97.4% accuracy on test set.</p>
+              <ul class="project-card__features">
+                <li><strong>97.4% accuracy</strong> on test set</li>
+                <li>TF-IDF vectorisation + Naive Bayes</li>
+                <li>Trained on 30,000 real emails</li>
+              </ul>
               <div class="project-card__footer">
-                <a href="#" class="project-card__link" id="project-calc-link">View Project →</a>
+                <a href="https://github.com/aloktiwari/ml-classifier" class="project-card__link" target="_blank" rel="noopener">View Source →</a>
               </div>
             </div>
           </article>
 
-          <!-- Project 5: AI Chatbot -->
-          <article class="project-card glass-card reveal" data-category="ai" id="project-chatbot" role="listitem">
-            <div class="project-card__img" style="--proj-color:#a855f7;" aria-hidden="true">
-              <div class="project-card__img-content">
-                <svg viewBox="0 0 80 60" fill="none"><rect width="80" height="60" rx="8" fill="rgba(168,85,247,0.12)"/><rect x="10" y="10" width="35" height="12" rx="6" fill="rgba(168,85,247,0.65)"/><rect x="35" y="28" width="35" height="12" rx="6" fill="rgba(168,85,247,0.45)"/><rect x="10" y="44" width="28" height="10" rx="5" fill="rgba(168,85,247,0.55)"/></svg>
-              </div>
-              <div class="project-card__overlay">
-                <a href="#" class="project-card__demo-btn" id="project-chatbot-demo">Live Demo</a>
-                <a href="#" class="project-card__code-btn" id="project-chatbot-code">Source Code</a>
-              </div>
-            </div>
-            <div class="project-card__body">
-              <div class="project-card__tags"><span class="tag">Python</span><span class="tag">AI</span><span class="tag">API</span></div>
-              <h3 class="project-card__title">AI Chatbot</h3>
-              <p class="project-card__desc">An intelligent conversational AI chatbot powered by NLP, with context retention and custom personality.</p>
-              <div class="project-card__footer">
-                <a href="#" class="project-card__link" id="project-chatbot-link">View Project →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 6: E-Commerce -->
+          <!-- Project: E-Commerce -->
           <article class="project-card glass-card reveal" data-category="web" id="project-ecommerce" role="listitem">
             <div class="project-card__img" style="--proj-color:#ef4444;" aria-hidden="true">
               <div class="project-card__img-content">
-                <svg viewBox="0 0 80 60" fill="none"><rect width="80" height="60" rx="8" fill="rgba(239,68,68,0.12)"/><rect x="10" y="8" width="12" height="8" rx="2" fill="rgba(239,68,68,0.65)"/><rect x="28" y="8" width="12" height="8" rx="2" fill="rgba(239,68,68,0.65)"/><rect x="46" y="8" width="12" height="8" rx="2" fill="rgba(239,68,68,0.65)"/><rect x="10" y="22" width="60" height="30" rx="4" fill="rgba(239,68,68,0.3)"/><circle cx="25" cy="44" r="5" fill="rgba(239,68,68,0.75)"/><circle cx="55" cy="44" r="5" fill="rgba(239,68,68,0.75)"/></svg>
+                <svg viewBox="0 0 80 60" fill="none"><rect width="80" height="60" rx="8" fill="rgba(239,68,68,0.12)"/><rect x="10" y="8" width="12" height="8" rx="2" fill="rgba(239,68,68,0.65)"/><rect x="28" y="8" width="12" height="8" rx="2" fill="rgba(239,68,68,0.65)"/><rect x="46" y="8" width="12" height="8" rx="2" fill="rgba(239,68,68,0.65)"/><rect x="10" y="22" width="60" height="30" rx="4" fill="rgba(239,68,68,0.3)"/></svg>
               </div>
               <div class="project-card__overlay">
-                <a href="#" class="project-card__demo-btn" id="project-ecommerce-demo">Live Demo</a>
-                <a href="#" class="project-card__code-btn" id="project-ecommerce-code">Source Code</a>
+                <a href="#" class="project-card__demo-btn" id="project-ecommerce-demo" target="_blank" rel="noopener">Live Demo ↗</a>
+                <a href="https://github.com/aloktiwari/shop-js" class="project-card__code-btn" id="project-ecommerce-code" target="_blank" rel="noopener">GitHub</a>
               </div>
             </div>
             <div class="project-card__body">
               <div class="project-card__tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
-              <h3 class="project-card__title">E-Commerce Website</h3>
-              <p class="project-card__desc">A full-featured online store with product gallery, cart, search, filters, and seamless checkout flow.</p>
+              <h3 class="project-card__title">E-Commerce Store</h3>
+              <p class="project-card__desc">Fully client-side online store with product filtering, cart management via LocalStorage, quantity controls, and a multi-step checkout flow.</p>
+              <ul class="project-card__features">
+                <li>Filter by category, price, rating</li>
+                <li>Cart with persistent LocalStorage</li>
+                <li>Multi-step checkout UX</li>
+              </ul>
               <div class="project-card__footer">
-                <a href="#" class="project-card__link" id="project-ecommerce-link">View Project →</a>
+                <a href="https://github.com/aloktiwari/shop-js" class="project-card__link" target="_blank" rel="noopener">View Source →</a>
               </div>
             </div>
           </article>
 
         </div>
+
+        <!-- Internship CTA after projects -->
+        <div class="projects__cta reveal">
+          <p class="projects__cta-text">Interested in my work? I'm available for summer 2025 internships.</p>
+          <a href="#contact" class="btn btn--primary" id="projects-cta-contact">
+            Let's Talk Internships
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
       </div>
     </section>
 
-    <!-- ========================================
-         SECTION 5 — SERVICES
-    ======================================== -->
-    <section id="services" class="services section" aria-labelledby="services-heading">
+    <!-- ═══════════════════════════════════════════
+         EDUCATION
+    ═══════════════════════════════════════════ -->
+    <section id="education" class="education section" aria-labelledby="education-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">What I Offer</span>
-          <h2 id="services-heading" class="section-title">My <span class="gradient-text">Services</span></h2>
-          <p class="section-subtitle">End-to-end solutions tailored to bring your vision to life.</p>
+          <span class="section-tag">Academic Background</span>
+          <h2 id="education-heading" class="section-title">My <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">Strong fundamentals from structured academic learning combined with self-directed exploration.</p>
         </div>
 
-        <div class="services__grid" role="list">
+        <div class="education__grid">
 
-          <div class="service-card glass-card reveal" id="service-webdev" role="listitem">
-            <div class="service-card__icon" aria-hidden="true">🌐</div>
-            <h3 class="service-card__title">Web Development</h3>
-            <p class="service-card__desc">Fast, responsive, beautiful websites built with modern HTML, CSS, and JavaScript that work flawlessly on every device.</p>
-            <ul class="service-card__list" aria-label="Web development services">
-              <li>Responsive Design</li>
-              <li>Performance Optimised</li>
-              <li>Cross-browser Support</li>
-            </ul>
+          <div class="edu-card glass-card reveal" id="edu-btech">
+            <div class="edu-card__header">
+              <div class="edu-card__icon" aria-hidden="true">🎓</div>
+              <div class="edu-card__meta">
+                <span class="edu-card__period">2022 – 2026</span>
+                <span class="edu-card__status edu-card__status--active">Current</span>
+              </div>
+            </div>
+            <h3 class="edu-card__degree">Bachelor of Technology</h3>
+            <p class="edu-card__field">Computer Science &amp; Engineering</p>
+            <p class="edu-card__institution">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              [Your University Name], India
+            </p>
+            <div class="edu-card__highlights">
+              <div class="edu-card__highlight-item">
+                <span class="edu-card__highlight-label">CGPA</span>
+                <span class="edu-card__highlight-value gradient-text">8.5 / 10</span>
+              </div>
+              <div class="edu-card__highlight-item">
+                <span class="edu-card__highlight-label">Specialisation</span>
+                <span class="edu-card__highlight-value">AI &amp; ML</span>
+              </div>
+            </div>
+            <div class="edu-card__tags">
+              <span class="tag">DSA</span><span class="tag">OOP</span><span class="tag">DBMS</span>
+              <span class="tag">OS</span><span class="tag">CN</span><span class="tag">ML</span>
+            </div>
           </div>
 
-          <div class="service-card glass-card reveal" id="service-frontend" role="listitem">
-            <div class="service-card__icon" aria-hidden="true">🎨</div>
-            <h3 class="service-card__title">UI / UX Design</h3>
-            <p class="service-card__desc">Pixel-perfect interfaces that merge aesthetics with usability — turning complex ideas into seamless user experiences.</p>
-            <ul class="service-card__list">
-              <li>Modern Design Systems</li>
-              <li>Prototyping &amp; Wireframing</li>
-              <li>Accessibility (WCAG)</li>
-            </ul>
+          <div class="edu-card glass-card reveal" id="edu-class12">
+            <div class="edu-card__header">
+              <div class="edu-card__icon" aria-hidden="true">📚</div>
+              <div class="edu-card__meta">
+                <span class="edu-card__period">2020 – 2022</span>
+                <span class="edu-card__status edu-card__status--done">Completed</span>
+              </div>
+            </div>
+            <h3 class="edu-card__degree">Higher Secondary (Class XII)</h3>
+            <p class="edu-card__field">Science — PCM + Computer Science</p>
+            <p class="edu-card__institution">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              [Your School Name], India
+            </p>
+            <div class="edu-card__highlights">
+              <div class="edu-card__highlight-item">
+                <span class="edu-card__highlight-label">Board</span>
+                <span class="edu-card__highlight-value">CBSE</span>
+              </div>
+              <div class="edu-card__highlight-item">
+                <span class="edu-card__highlight-label">Percentage</span>
+                <span class="edu-card__highlight-value gradient-text">92%</span>
+              </div>
+            </div>
+            <div class="edu-card__tags"><span class="tag">Physics</span><span class="tag">Maths</span><span class="tag">C++</span></div>
           </div>
 
-          <div class="service-card glass-card reveal" id="service-python" role="listitem">
-            <div class="service-card__icon" aria-hidden="true">🐍</div>
-            <h3 class="service-card__title">Python Development</h3>
-            <p class="service-card__desc">Automation scripts, data analysis pipelines, web scraping tools, and backend APIs built with Python.</p>
-            <ul class="service-card__list">
-              <li>Automation &amp; Scripting</li>
-              <li>Data Processing</li>
-              <li>REST APIs</li>
-            </ul>
-          </div>
-
-          <div class="service-card glass-card reveal" id="service-ai" role="listitem">
-            <div class="service-card__icon" aria-hidden="true">🤖</div>
-            <h3 class="service-card__title">AI Integration</h3>
-            <p class="service-card__desc">Integrating cutting-edge AI tools and APIs into your products — chatbots, recommendation engines, and more.</p>
-            <ul class="service-card__list">
-              <li>AI Chatbots</li>
-              <li>LLM API Integration</li>
-              <li>Smart Automation</li>
-            </ul>
-          </div>
-
-          <div class="service-card glass-card reveal" id="service-mentoring" role="listitem">
-            <div class="service-card__icon" aria-hidden="true">📚</div>
-            <h3 class="service-card__title">Code Mentoring</h3>
-            <p class="service-card__desc">One-on-one coding guidance to help beginners and intermediates level up their skills in web and Python development.</p>
-            <ul class="service-card__list">
-              <li>Project Reviews</li>
-              <li>Code Walkthroughs</li>
-              <li>Career Guidance</li>
-            </ul>
-          </div>
-
-          <div class="service-card glass-card reveal" id="service-devops" role="listitem">
-            <div class="service-card__icon" aria-hidden="true">⚙️</div>
-            <h3 class="service-card__title">DevOps &amp; Git</h3>
-            <p class="service-card__desc">Setting up Git workflows, CI/CD pipelines, and helping teams collaborate effectively with best practices.</p>
-            <ul class="service-card__list">
-              <li>Git Workflow Setup</li>
-              <li>GitHub Actions CI/CD</li>
-              <li>Deployment Pipelines</li>
-            </ul>
+          <div class="edu-card glass-card reveal edu-card--full" id="edu-self">
+            <div class="edu-card__header">
+              <div class="edu-card__icon" aria-hidden="true">🚀</div>
+              <div class="edu-card__meta">
+                <span class="edu-card__period">2020 – Present</span>
+                <span class="edu-card__status edu-card__status--active">Ongoing</span>
+              </div>
+            </div>
+            <h3 class="edu-card__degree">Self-Directed Learning</h3>
+            <p class="edu-card__field">Web Development · AI/ML · Competitive Programming · Open Source</p>
+            <p class="edu-card__desc">200+ LeetCode problems solved. 5+ certifications from Coursera, freeCodeCamp, and Udemy. Active on Kaggle. Constantly building side projects to apply what I learn.</p>
+            <div class="edu-card__tags">
+              <span class="tag">Coursera</span><span class="tag">freeCodeCamp</span>
+              <span class="tag">LeetCode (200+)</span><span class="tag">Kaggle</span><span class="tag">GitHub</span>
+            </div>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ========================================
-         SECTION 6 — EXPERIENCE TIMELINE
-    ======================================== -->
-    <section id="experience" class="experience section" aria-labelledby="experience-heading">
+    <!-- ═══════════════════════════════════════════
+         CERTIFICATIONS & ACHIEVEMENTS
+    ═══════════════════════════════════════════ -->
+    <section id="certifications" class="certifications section" aria-labelledby="certifications-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">My Journey</span>
-          <h2 id="experience-heading" class="section-title">Experience &amp; <span class="gradient-text">Education</span></h2>
-          <p class="section-subtitle">The milestones that shaped who I am as a developer.</p>
+          <span class="section-tag">Credentials &amp; Wins</span>
+          <h2 id="certifications-heading" class="section-title">Certs &amp; <span class="gradient-text">Achievements</span></h2>
+          <p class="section-subtitle">Verified credentials and measurable results.</p>
         </div>
 
-        <div class="timeline" role="list" aria-label="Career and education timeline">
+        <h3 class="certs-subheading reveal"><span aria-hidden="true">🏅</span> Certifications</h3>
+        <div class="certs__grid" role="list" aria-label="Certifications">
 
-          <div class="timeline__item timeline__item--left reveal" id="exp-1" role="listitem">
-            <div class="timeline__dot" aria-hidden="true"></div>
-            <div class="timeline__content glass-card">
-              <time class="timeline__date" datetime="2024">2024 – Present</time>
-              <h3 class="timeline__title">Freelance Full Stack Developer</h3>
-              <span class="timeline__org">Self-Employed</span>
-              <p class="timeline__desc">Building and delivering custom web applications and Python tools for clients. Focusing on clean UI/UX, Python scripting, and integrating AI-powered features.</p>
-              <div class="timeline__tags"><span class="tag">React</span><span class="tag">Python</span><span class="tag">AI</span></div>
+          <div class="cert-card glass-card reveal" id="cert-webdev" role="listitem">
+            <div class="cert-card__badge" style="--cert-color:#f7df1e;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+            </div>
+            <div class="cert-card__body">
+              <h4 class="cert-card__title">Responsive Web Design</h4>
+              <p class="cert-card__issuer">freeCodeCamp</p>
+              <time class="cert-card__date" datetime="2023">2023</time>
+            </div>
+            <a href="https://www.freecodecamp.org/certification/aloktiwari/responsive-web-design" class="cert-card__verify" target="_blank" rel="noopener" aria-label="Verify Responsive Web Design certificate on freeCodeCamp">Verify ↗</a>
+          </div>
+
+          <div class="cert-card glass-card reveal" id="cert-python" role="listitem">
+            <div class="cert-card__badge" style="--cert-color:#3776AB;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.83l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.23l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.26-.02.21-.01h5.74l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25a.72.72 0 100 1.44.72.72 0 000-1.44zm6.06-9a.72.72 0 100 1.44.72.72 0 000-1.44z"/></svg>
+            </div>
+            <div class="cert-card__body">
+              <h4 class="cert-card__title">Python for Everybody</h4>
+              <p class="cert-card__issuer">Coursera — University of Michigan</p>
+              <time class="cert-card__date" datetime="2023">2023</time>
+            </div>
+            <a href="https://coursera.org/verify/YOUR_CERT_ID" class="cert-card__verify" target="_blank" rel="noopener" aria-label="Verify Python certificate on Coursera">Verify ↗</a>
+          </div>
+
+          <div class="cert-card glass-card reveal" id="cert-ai" role="listitem">
+            <div class="cert-card__badge" style="--cert-color:#00d9ff;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2zM9 11a2 2 0 0 0 0 4 2 2 0 0 0 0-4zm6 0a2 2 0 0 0 0 4 2 2 0 0 0 0-4z"/></svg>
+            </div>
+            <div class="cert-card__body">
+              <h4 class="cert-card__title">Machine Learning Specialisation</h4>
+              <p class="cert-card__issuer">Coursera — DeepLearning.AI</p>
+              <time class="cert-card__date" datetime="2024">2024</time>
+            </div>
+            <a href="https://coursera.org/verify/YOUR_CERT_ID" class="cert-card__verify" target="_blank" rel="noopener" aria-label="Verify ML Specialisation certificate">Verify ↗</a>
+          </div>
+
+          <div class="cert-card glass-card reveal" id="cert-git" role="listitem">
+            <div class="cert-card__badge" style="--cert-color:#F05032;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.546 10.93L13.067.452a1.55 1.55 0 00-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 012.327 2.341l2.658 2.66a1.838 1.838 0 011.946 3.002 1.836 1.836 0 01-2.65-2.469l-2.484-2.483v6.529c.175.086.34.198.487.344a1.836 1.836 0 11-2.597 0 1.84 1.84 0 01.6-.403V8.861a1.838 1.838 0 01-.6-.403 1.838 1.838 0 01-.432-1.896L7.717 3.9 1.034 10.586a1.55 1.55 0 000 2.19l10.48 10.477a1.55 1.55 0 002.186 0l9.846-9.847a1.55 1.55 0 000-2.188z"/></svg>
+            </div>
+            <div class="cert-card__body">
+              <h4 class="cert-card__title">Git &amp; GitHub — The Complete Guide</h4>
+              <p class="cert-card__issuer">Udemy</p>
+              <time class="cert-card__date" datetime="2023">2023</time>
+            </div>
+            <a href="https://udemy.com/certificate/YOUR_CERT_ID" class="cert-card__verify" target="_blank" rel="noopener" aria-label="Verify Git certificate on Udemy">Verify ↗</a>
+          </div>
+
+          <div class="cert-card glass-card reveal" id="cert-js" role="listitem">
+            <div class="cert-card__badge" style="--cert-color:#6c63ff;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="cert-card__body">
+              <h4 class="cert-card__title">JavaScript Algorithms &amp; Data Structures</h4>
+              <p class="cert-card__issuer">freeCodeCamp</p>
+              <time class="cert-card__date" datetime="2024">2024</time>
+            </div>
+            <a href="https://www.freecodecamp.org/certification/aloktiwari/javascript-algorithms-and-data-structures" class="cert-card__verify" target="_blank" rel="noopener" aria-label="Verify JavaScript Algorithms certificate">Verify ↗</a>
+          </div>
+
+        </div>
+
+        <h3 class="certs-subheading reveal" style="margin-top: var(--space-16);"><span aria-hidden="true">🏆</span> Achievements</h3>
+        <div class="achievements__grid" role="list" aria-label="Achievements">
+
+          <div class="achievement-card glass-card reveal" id="ach-1" role="listitem">
+            <div class="achievement-card__icon" aria-hidden="true">🏆</div>
+            <div class="achievement-card__content">
+              <h4 class="achievement-card__title">Top 5% on LeetCode</h4>
+              <p class="achievement-card__desc">Solved <strong>200+ problems</strong> (Easy/Medium/Hard). Consistently ranked in the global top 5% in weekly contests. Focused on dynamic programming, graphs, and system design.</p>
+              <a href="https://leetcode.com/aloktiwari" target="_blank" rel="noopener" class="achievement-card__link">View Profile →</a>
+              <span class="achievement-card__year">2024</span>
             </div>
           </div>
 
-          <div class="timeline__item timeline__item--right reveal" id="exp-2" role="listitem">
-            <div class="timeline__dot" aria-hidden="true"></div>
-            <div class="timeline__content glass-card">
-              <time class="timeline__date" datetime="2023">2023 – 2024</time>
-              <h3 class="timeline__title">Open Source Contributor</h3>
-              <span class="timeline__org">GitHub Community</span>
-              <p class="timeline__desc">Contributed to multiple open-source repositories — fixing bugs, improving documentation, and adding new features to community-driven projects.</p>
-              <div class="timeline__tags"><span class="tag">Git</span><span class="tag">JavaScript</span><span class="tag">Python</span></div>
+          <div class="achievement-card glass-card reveal" id="ach-2" role="listitem">
+            <div class="achievement-card__icon" aria-hidden="true">🥇</div>
+            <div class="achievement-card__content">
+              <h4 class="achievement-card__title">University Hackathon — 1st Place</h4>
+              <p class="achievement-card__desc">Won first place at the Smart India Hackathon university-level qualifier. Built an <strong>AI-powered accessibility tool</strong> for visually impaired users in 24 hours with a team of 4.</p>
+              <span class="achievement-card__year">2024</span>
             </div>
           </div>
 
-          <div class="timeline__item timeline__item--left reveal" id="exp-3" role="listitem">
-            <div class="timeline__dot" aria-hidden="true"></div>
-            <div class="timeline__content glass-card">
-              <time class="timeline__date" datetime="2022">2022 – 2023</time>
-              <h3 class="timeline__title">Web Development Bootcamp</h3>
-              <span class="timeline__org">Online Learning</span>
-              <p class="timeline__desc">Completed an intensive full-stack web development bootcamp. Mastered HTML, CSS, JavaScript, and gained hands-on experience with real-world projects.</p>
-              <div class="timeline__tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+          <div class="achievement-card glass-card reveal" id="ach-3" role="listitem">
+            <div class="achievement-card__icon" aria-hidden="true">⭐</div>
+            <div class="achievement-card__content">
+              <h4 class="achievement-card__title">Open Source Contributor</h4>
+              <p class="achievement-card__desc">Contributed bug fixes and documentation improvements to <strong>5+ public repositories</strong> on GitHub. Actively participates in first-timers-only and good-first-issue projects.</p>
+              <a href="https://github.com/aloktiwari" target="_blank" rel="noopener" class="achievement-card__link">View GitHub →</a>
+              <span class="achievement-card__year">2023 – Present</span>
             </div>
           </div>
 
-          <div class="timeline__item timeline__item--right reveal" id="exp-4" role="listitem">
-            <div class="timeline__dot" aria-hidden="true"></div>
-            <div class="timeline__content glass-card">
-              <time class="timeline__date" datetime="2021">2021 – 2022</time>
-              <h3 class="timeline__title">Started Coding Journey</h3>
-              <span class="timeline__org">Self-Taught</span>
-              <p class="timeline__desc">Wrote my first lines of code in Python and fell in love with programming. Built small automation scripts and discovered the world of computer science.</p>
-              <div class="timeline__tags"><span class="tag">Python</span><span class="tag">C++</span><span class="tag">Algorithms</span></div>
+          <div class="achievement-card glass-card reveal" id="ach-4" role="listitem">
+            <div class="achievement-card__icon" aria-hidden="true">📜</div>
+            <div class="achievement-card__content">
+              <h4 class="achievement-card__title">Merit Scholarship — CSE Dept.</h4>
+              <p class="achievement-card__desc">Awarded merit-based scholarship for <strong>top academic performance</strong> in the Computer Science &amp; Engineering department — consecutive years 2022 &amp; 2023.</p>
+              <span class="achievement-card__year">2022 – 2023</span>
             </div>
           </div>
 
@@ -730,191 +918,195 @@
       </div>
     </section>
 
-    <!-- ========================================
-         SECTION 7 — TESTIMONIALS
-    ======================================== -->
-    <section id="testimonials" class="testimonials section" aria-labelledby="testimonials-heading">
+    <!-- ═══════════════════════════════════════════
+         LEARNING JOURNEY & GOALS
+    ═══════════════════════════════════════════ -->
+    <section id="goals" class="goals section" aria-labelledby="goals-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Kind Words</span>
-          <h2 id="testimonials-heading" class="section-title">What People <span class="gradient-text">Say</span></h2>
-          <p class="section-subtitle">Feedback from clients, collaborators, and mentors.</p>
+          <span class="section-tag">My Roadmap</span>
+          <h2 id="goals-heading" class="section-title">Journey &amp; <span class="gradient-text">Goals</span></h2>
+          <p class="section-subtitle">How I got here and where I'm going next.</p>
         </div>
 
-        <!-- Slider -->
-        <div class="testimonials__slider reveal"
-             id="testimonials-slider"
-             role="region"
-             aria-label="Testimonials carousel"
-             aria-roledescription="carousel">
+        <div class="journey-timeline" role="list" aria-label="Learning journey timeline">
 
-          <div class="testimonials__track" id="testimonials-track">
-
-            <div class="testimonial-card glass-card"
-                 role="group" aria-roledescription="slide"
-                 aria-label="Testimonial 1 of 4 by Sarah Johnson"
-                 id="testimonial-1">
-              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
-              <blockquote class="testimonial-card__text">
-                "Prime delivered an outstanding portfolio website for our agency. The attention to detail, animations, and mobile responsiveness were beyond what we expected. Highly professional and fast!"
-              </blockquote>
-              <div class="testimonial-card__author">
-                <div class="testimonial-card__avatar" style="--av-color: #6c63ff;" aria-hidden="true">SJ</div>
-                <div>
-                  <strong class="testimonial-card__name">Sarah Johnson</strong>
-                  <span class="testimonial-card__role">Creative Director, PixelWave Agency</span>
-                </div>
-              </div>
+          <div class="journey-item reveal" id="journey-1" role="listitem">
+            <div class="journey-item__dot" aria-hidden="true"><span>1</span></div>
+            <div class="journey-item__content glass-card">
+              <time class="journey-item__date" datetime="2020">2020</time>
+              <h3 class="journey-item__title">First Lines of Code</h3>
+              <p class="journey-item__desc">Started C++ in Class XI. Fell in love with problem-solving. Wrote my first "Hello, World!" and immediately started building small games and utilities. Self-studied HTML/CSS through MDN and YouTube.</p>
+              <div class="journey-item__tags"><span class="tag">C++</span><span class="tag">HTML</span><span class="tag">CSS</span></div>
             </div>
-
-            <div class="testimonial-card glass-card"
-                 role="group" aria-roledescription="slide"
-                 aria-label="Testimonial 2 of 4 by Alex Chen"
-                 id="testimonial-2">
-              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
-              <blockquote class="testimonial-card__text">
-                "Working with Prime on our AI chatbot project was a fantastic experience. The code was clean, well-documented, and the solution worked perfectly from day one. A true professional!"
-              </blockquote>
-              <div class="testimonial-card__author">
-                <div class="testimonial-card__avatar" style="--av-color: #00d9ff;" aria-hidden="true">AC</div>
-                <div>
-                  <strong class="testimonial-card__name">Alex Chen</strong>
-                  <span class="testimonial-card__role">CTO, TechStart Inc.</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card glass-card"
-                 role="group" aria-roledescription="slide"
-                 aria-label="Testimonial 3 of 4 by Maya Patel"
-                 id="testimonial-3">
-              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
-              <blockquote class="testimonial-card__text">
-                "Prime helped me learn JavaScript in just 3 weeks through personalised coaching sessions. The teaching style is clear, patient, and incredibly effective. I landed my first dev job!"
-              </blockquote>
-              <div class="testimonial-card__author">
-                <div class="testimonial-card__avatar" style="--av-color: #a855f7;" aria-hidden="true">MP</div>
-                <div>
-                  <strong class="testimonial-card__name">Maya Patel</strong>
-                  <span class="testimonial-card__role">Junior Developer, Startly Co.</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card glass-card"
-                 role="group" aria-roledescription="slide"
-                 aria-label="Testimonial 4 of 4 by James Williams"
-                 id="testimonial-4">
-              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
-              <blockquote class="testimonial-card__text">
-                "Our e-commerce platform was built by Prime and it exceeded all expectations — beautiful design, fast performance, and robust code. Sales increased 40% after launch!"
-              </blockquote>
-              <div class="testimonial-card__author">
-                <div class="testimonial-card__avatar" style="--av-color: #10b981;" aria-hidden="true">JW</div>
-                <div>
-                  <strong class="testimonial-card__name">James Williams</strong>
-                  <span class="testimonial-card__role">Founder, ShopBright</span>
-                </div>
-              </div>
-            </div>
-
-          </div><!-- /.testimonials__track -->
-
-          <!-- Slider Controls -->
-          <div class="testimonials__controls" role="group" aria-label="Carousel controls">
-            <button class="testimonials__btn" id="testimonial-prev" aria-label="Previous testimonial">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-            </button>
-            <div class="testimonials__dots" id="testimonials-dots" role="tablist" aria-label="Go to testimonial"></div>
-            <button class="testimonials__btn" id="testimonial-next" aria-label="Next testimonial">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
-            </button>
           </div>
 
-        </div><!-- /.testimonials__slider -->
+          <div class="journey-item journey-item--right reveal" id="journey-2" role="listitem">
+            <div class="journey-item__dot" aria-hidden="true"><span>2</span></div>
+            <div class="journey-item__content glass-card">
+              <time class="journey-item__date" datetime="2022">2022</time>
+              <h3 class="journey-item__title">Enrolled in B.Tech CSE</h3>
+              <p class="journey-item__desc">Joined [Your University] with a focus on CS fundamentals — DSA, OOP, DBMS, OS, and CN. Started taking Coursera certifications in parallel. Built first real web projects. Joined the coding club.</p>
+              <div class="journey-item__tags"><span class="tag">DSA</span><span class="tag">JavaScript</span><span class="tag">Python</span></div>
+            </div>
+          </div>
+
+          <div class="journey-item reveal" id="journey-3" role="listitem">
+            <div class="journey-item__dot" aria-hidden="true"><span>3</span></div>
+            <div class="journey-item__content glass-card">
+              <time class="journey-item__date" datetime="2023">2023</time>
+              <h3 class="journey-item__title">Discovering AI &amp; ML</h3>
+              <p class="journey-item__desc">Completed Andrew Ng's ML Specialisation on Coursera. Built a spam classifier (97.4% accuracy). Solved 150+ LeetCode problems. Won merit scholarship for top CGPA in the department.</p>
+              <div class="journey-item__tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">LeetCode</span></div>
+            </div>
+          </div>
+
+          <div class="journey-item journey-item--right reveal" id="journey-4" role="listitem">
+            <div class="journey-item__dot" aria-hidden="true"><span>4</span></div>
+            <div class="journey-item__content glass-card">
+              <time class="journey-item__date" datetime="2024">2024 – Present</time>
+              <h3 class="journey-item__title">Full-Stack + AI Integration</h3>
+              <p class="journey-item__desc">Building full-stack apps with React + Node.js and integrating LLM APIs. Won first place at the SIH university hackathon. Contributed to open source. Now actively seeking my first internship.</p>
+              <div class="journey-item__tags"><span class="tag">React</span><span class="tag">LLM APIs</span><span class="tag">Hackathons</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="certs-subheading reveal" style="margin-top: var(--space-16);"><span aria-hidden="true">🎯</span> 2025 Goals</h3>
+        <div class="goals__grid">
+
+          <div class="goal-card glass-card reveal" id="goal-1">
+            <div class="goal-card__icon" aria-hidden="true">💼</div>
+            <h4 class="goal-card__title">Land a Software Engineering Internship</h4>
+            <p class="goal-card__desc">Actively applying to SWE and AI/ML internships at product companies. Preparing system design, LLD, and DSA for technical rounds.</p>
+            <div class="goal-card__progress" role="progressbar" aria-label="Progress: Actively applying" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              <div class="goal-card__progress-bar" style="--goal-pct: 65%"></div>
+              <span class="goal-card__progress-label">Actively Applying</span>
+            </div>
+          </div>
+
+          <div class="goal-card glass-card reveal" id="goal-2">
+            <div class="goal-card__icon" aria-hidden="true">🤖</div>
+            <h4 class="goal-card__title">Ship an AI SaaS to Production</h4>
+            <p class="goal-card__desc">Build and deploy a production-grade AI tool with real users, authentication, billing, and monitoring — not just a demo.</p>
+            <div class="goal-card__progress" role="progressbar" aria-label="Progress: In development" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+              <div class="goal-card__progress-bar" style="--goal-pct: 35%"></div>
+              <span class="goal-card__progress-label">In Development</span>
+            </div>
+          </div>
+
+          <div class="goal-card glass-card reveal" id="goal-3">
+            <div class="goal-card__icon" aria-hidden="true">🌐</div>
+            <h4 class="goal-card__title">Meaningful Open Source Contribution</h4>
+            <p class="goal-card__desc">Get a significant feature or bug fix merged into a popular open-source project (not just docs) — ideally a Python or JS library.</p>
+            <div class="goal-card__progress" role="progressbar" aria-label="Progress: Researching projects" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+              <div class="goal-card__progress-bar" style="--goal-pct: 25%"></div>
+              <span class="goal-card__progress-label">Researching Projects</span>
+            </div>
+          </div>
+
+          <div class="goal-card glass-card reveal" id="goal-4">
+            <div class="goal-card__icon" aria-hidden="true">📊</div>
+            <h4 class="goal-card__title">300 LeetCode + System Design</h4>
+            <p class="goal-card__desc">Hit 300 LeetCode problems and complete a structured System Design course covering distributed systems, caching, and API design.</p>
+            <div class="goal-card__progress" role="progressbar" aria-label="Progress: 200 of 300 done" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">
+              <div class="goal-card__progress-bar" style="--goal-pct: 67%"></div>
+              <span class="goal-card__progress-label">200 / 300 Done</span>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- ========================================
-         SECTION 8 — CONTACT
-    ======================================== -->
+    <!-- ═══════════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════════ -->
     <section id="contact" class="contact section" aria-labelledby="contact-heading">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-tag">Get In Touch</span>
-          <h2 id="contact-heading" class="section-title">Let's <span class="gradient-text">Connect</span></h2>
-          <p class="section-subtitle">Have a project in mind? Let's build something amazing together.</p>
+          <h2 id="contact-heading" class="section-title">Let's <span class="gradient-text">Talk</span></h2>
+          <p class="section-subtitle">Have an internship opportunity, a project idea, or just want to connect? I reply within 24 hours.</p>
         </div>
 
         <div class="contact__grid">
 
-          <!-- Info panel -->
           <div class="contact__info reveal reveal--left">
             <div class="contact-info-card glass-card" id="contact-email-card">
               <div class="contact-info-card__icon" aria-hidden="true">📧</div>
               <div>
-                <span class="contact-info-card__label">Email</span>
-                <a href="mailto:alok.tiwari@email.com" class="contact-info-card__value" id="contact-email-link">alok.tiwari@email.com</a>
+                <span class="contact-info-card__label">Email (Best way to reach me)</span>
+                <a href="mailto:your.email@gmail.com" class="contact-info-card__value" id="contact-email-link">your.email@gmail.com</a>
               </div>
             </div>
-            <div class="contact-info-card glass-card" id="contact-phone-card">
-              <div class="contact-info-card__icon" aria-hidden="true">📱</div>
+            <div class="contact-info-card glass-card" id="contact-github-card">
+              <div class="contact-info-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:24px;height:24px;"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </div>
               <div>
-                <span class="contact-info-card__label">Phone</span>
-                <a href="tel:+919876543210" class="contact-info-card__value" id="contact-phone-link">+91 98765 43210</a>
+                <span class="contact-info-card__label">GitHub</span>
+                <a href="https://github.com/aloktiwari" target="_blank" rel="noopener noreferrer" class="contact-info-card__value" id="contact-github-link">github.com/aloktiwari</a>
               </div>
             </div>
-            <div class="contact-info-card glass-card" id="contact-location-card">
-              <div class="contact-info-card__icon" aria-hidden="true">📍</div>
+            <div class="contact-info-card glass-card" id="contact-linkedin-card">
+              <div class="contact-info-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:24px;height:24px;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
               <div>
-                <span class="contact-info-card__label">Location</span>
-                <span class="contact-info-card__value">Available Worldwide</span>
+                <span class="contact-info-card__label">LinkedIn</span>
+                <a href="https://linkedin.com/in/aloktiwari" target="_blank" rel="noopener noreferrer" class="contact-info-card__value" id="contact-linkedin-link">linkedin.com/in/aloktiwari</a>
+              </div>
+            </div>
+            <div class="contact-info-card glass-card" id="contact-leetcode-card">
+              <div class="contact-info-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:24px;height:24px;"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+              </div>
+              <div>
+                <span class="contact-info-card__label">LeetCode</span>
+                <a href="https://leetcode.com/aloktiwari" target="_blank" rel="noopener noreferrer" class="contact-info-card__value" id="contact-leetcode-link">leetcode.com/aloktiwari</a>
               </div>
             </div>
 
-            <!-- Social strip -->
-            <div class="contact__social-row" role="list" aria-label="Social profiles">
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link social-link--sm" aria-label="GitHub" id="contact-social-github" role="listitem">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link social-link--sm" aria-label="LinkedIn" id="contact-social-linkedin" role="listitem">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              </a>
-              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-link social-link--sm" aria-label="Twitter / X" id="contact-social-twitter" role="listitem">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.258 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
+            <div class="contact__response-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Typical response time: <strong>within 24 hours</strong></span>
             </div>
           </div>
 
-          <!-- Contact form -->
           <div class="contact__form-wrap reveal reveal--right">
             <form id="contact-form" class="contact-form glass-card" novalidate aria-labelledby="contact-heading">
               <div class="form-group">
-                <label for="contact-name"    class="form-label">Full Name <span aria-hidden="true">*</span></label>
-                <input type="text"  id="contact-name"    name="name"    class="form-input"    placeholder="John Doe"           required autocomplete="name"  />
-                <span class="form-error" id="error-name"    role="alert" aria-live="polite"></span>
+                <label for="contact-name" class="form-label">Full Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="Jane Smith" required autocomplete="name"/>
+                <span class="form-error" id="error-name" role="alert" aria-live="polite"></span>
               </div>
               <div class="form-group">
-                <label for="contact-email"   class="form-label">Email Address <span aria-hidden="true">*</span></label>
-                <input type="email" id="contact-email"   name="email"   class="form-input"    placeholder="john@email.com"     required autocomplete="email" />
-                <span class="form-error" id="error-email"   role="alert" aria-live="polite"></span>
+                <label for="contact-email" class="form-label">Work / Personal Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="jane@company.com" required autocomplete="email"/>
+                <span class="form-error" id="error-email" role="alert" aria-live="polite"></span>
               </div>
               <div class="form-group">
                 <label for="contact-subject" class="form-label">Subject <span aria-hidden="true">*</span></label>
-                <input type="text"  id="contact-subject" name="subject" class="form-input"    placeholder="Project Inquiry"    required />
+                <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="Internship Opportunity — Summer 2025" required/>
                 <span class="form-error" id="error-subject" role="alert" aria-live="polite"></span>
               </div>
               <div class="form-group">
                 <label for="contact-message" class="form-label">Message <span aria-hidden="true">*</span></label>
-                <textarea id="contact-message" name="message" class="form-textarea" rows="5" placeholder="Tell me about your project…" required></textarea>
+                <textarea id="contact-message" name="message" class="form-textarea" rows="5" placeholder="Hi Alok, I'd love to discuss an internship opportunity at…" required></textarea>
                 <span class="form-error" id="error-message" role="alert" aria-live="polite"></span>
               </div>
               <button type="submit" class="btn btn--primary btn--full" id="contact-submit">
                 <span id="contact-submit-text">Send Message</span>
                 <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
               </button>
+              <p class="form-note">
+                Prefer email? Reach me directly at
+                <a href="mailto:your.email@gmail.com">your.email@gmail.com</a>
+              </p>
               <div id="form-success" class="form-success" role="alert" aria-live="polite" hidden>
-                ✅ Message sent! I'll get back to you within 24 hours.
+                ✅ Message sent! I'll reply within 24 hours.
               </div>
             </form>
           </div>
@@ -925,57 +1117,49 @@
 
   </main>
 
-  <!-- ========================================
-       FOOTER
-  ======================================== -->
+  <!-- ── FOOTER ──────────────────────────────────────── -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__grid">
 
-        <!-- Brand -->
         <div class="footer__brand">
           <a href="#hero" class="nav__logo footer__logo" aria-label="Back to top">
-            <span class="nav__logo-bracket" aria-hidden="true">&lt;</span>Alok<span class="nav__logo-bracket" aria-hidden="true">/&gt;</span>
+            <span class="nav__logo-bracket" aria-hidden="true">&lt;</span>AT<span class="nav__logo-bracket" aria-hidden="true">/&gt;</span>
           </a>
-          <p class="footer__tagline">Passionate about software development, AI, and solving real-world problems through technology.</p>
+          <p class="footer__tagline">B.Tech CS Student · AI/ML &amp; Software Engineering · Open to Internships · India</p>
           <div class="footer__socials" role="list" aria-label="Social profiles">
-            <a href="https://github.com/aloktiwari"   target="_blank" rel="noopener noreferrer" class="social-link social-link--sm" aria-label="GitHub"     id="footer-github"   role="listitem"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
-            <a href="https://linkedin.com/in/aloktiwari" target="_blank" rel="noopener noreferrer" class="social-link social-link--sm" aria-label="LinkedIn"   id="footer-linkedin" role="listitem"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-            <a href="https://twitter.com/aloktiwari"  target="_blank" rel="noopener noreferrer" class="social-link social-link--sm" aria-label="Twitter / X" id="footer-twitter"  role="listitem"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.258 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://github.com/aloktiwari" target="_blank" rel="noopener noreferrer" class="social-link social-link--sm" aria-label="GitHub" id="footer-github" role="listitem">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/aloktiwari" target="_blank" rel="noopener noreferrer" class="social-link social-link--sm" aria-label="LinkedIn" id="footer-linkedin" role="listitem">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://leetcode.com/aloktiwari" target="_blank" rel="noopener noreferrer" class="social-link social-link--sm" aria-label="LeetCode" id="footer-leetcode" role="listitem">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+            </a>
           </div>
         </div>
 
-        <!-- Quick Links -->
         <div class="footer__col">
-          <h2 class="footer__heading">Quick Links</h2>
+          <h3 class="footer__heading">Quick Links</h3>
           <ul class="footer__links">
-            <li><a href="#about"       class="footer__link">About Me</a></li>
-            <li><a href="#skills"      class="footer__link">Skills</a></li>
-            <li><a href="#projects"    class="footer__link">Projects</a></li>
-            <li><a href="#services"    class="footer__link">Services</a></li>
-            <li><a href="#experience"  class="footer__link">Experience</a></li>
+            <li><a href="#about"          class="footer__link">About</a></li>
+            <li><a href="#skills"         class="footer__link">Skills</a></li>
+            <li><a href="#projects"       class="footer__link">Projects</a></li>
+            <li><a href="#education"      class="footer__link">Education</a></li>
+            <li><a href="#certifications" class="footer__link">Certifications</a></li>
+            <li><a href="#contact"        class="footer__link">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Services -->
         <div class="footer__col">
-          <h2 class="footer__heading">Services</h2>
+          <h3 class="footer__heading">Contact</h3>
           <ul class="footer__links">
-            <li><a href="#services" class="footer__link">Web Development</a></li>
-            <li><a href="#services" class="footer__link">UI / UX Design</a></li>
-            <li><a href="#services" class="footer__link">Python Development</a></li>
-            <li><a href="#services" class="footer__link">AI Integration</a></li>
-            <li><a href="#services" class="footer__link">Code Mentoring</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact -->
-        <div class="footer__col">
-          <h2 class="footer__heading">Contact</h2>
-          <ul class="footer__links">
-            <li><a href="mailto:alok.tiwari@email.com" class="footer__link">alok.tiwari@email.com</a></li>
-            <li><a href="tel:+919876543210"             class="footer__link">+91 98765 43210</a></li>
-            <li><span class="footer__link--text">Available Worldwide</span></li>
+            <li><a href="mailto:your.email@gmail.com"       class="footer__link">your.email@gmail.com</a></li>
+            <li><a href="https://github.com/aloktiwari"     class="footer__link" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/aloktiwari" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://leetcode.com/aloktiwari"   class="footer__link" target="_blank" rel="noopener">LeetCode</a></li>
+            <li><a href="resume.pdf" class="footer__link" target="_blank" rel="noopener">Resume (PDF)</a></li>
           </ul>
         </div>
 
@@ -983,25 +1167,17 @@
 
       <div class="footer__bottom">
         <p class="footer__copy">
-          &copy; <span id="footer-year"></span> <strong>Alok Tiwari</strong>. Crafted with ❤️ and code.
+          &copy; <span id="footer-year"></span> <strong>Alok Tiwari</strong>. Built from scratch with HTML, CSS &amp; JS.
         </p>
         <a href="#hero" class="footer__back-top" id="footer-back-top">↑ Back to Top</a>
       </div>
     </div>
   </footer>
 
-  <!-- ========================================
-       BACK TO TOP BUTTON
-  ======================================== -->
   <button id="back-to-top" class="back-to-top" aria-label="Scroll back to top" hidden>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
   </button>
 
-  <!-- ========================================
-       SCRIPTS
-  ======================================== -->
   <script src="script.js" defer></script>
 </body>
 </html>

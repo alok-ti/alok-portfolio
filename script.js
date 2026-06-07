@@ -462,10 +462,12 @@ function initTypingAnimation() {
   const words = [
     'CS Student',
     'Software Developer',
-    'AI Enthusiast',
-    'Web Developer',
+    'AI Developer',
+    'Full-Stack Developer',
     'Python Developer',
+    'Open Source Learner',
     'Problem Solver',
+    'AI Enthusiast',
   ];
 
   // Skip animation if reduced-motion — just show first word
@@ -874,7 +876,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Interactive components
   initProjectFilter();
-  initTestimonialsSlider();
   initContactForm();
   initBackToTop();
 
@@ -885,6 +886,6 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(
     '%c< Alok Tiwari /> Portfolio',
     'color:#6c63ff;font-size:16px;font-weight:900;font-family:monospace;',
-    '\n\nComputer Science Student & Aspiring Software Engineer.\nBuilt with ❤️  vanilla HTML, CSS & JS.\nInspect away — all code is documented and readable.'
+    '\n\nComputer Science Student & Aspiring Software Engineer.\nSeeking internship opportunities in Software Engineering & AI.\nBuilt with ❤️  vanilla HTML, CSS & JS.'
   );
 });
